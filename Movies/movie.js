@@ -30,6 +30,10 @@ class Movie{
     set year(newYear){
         this._year = newYear;
     }
+
+    static createActionMovie(title, year){
+        return new Movie(title, Movie.genre.ACTION, year);
+    }
 }
 
 Movie.genre = {
@@ -41,4 +45,4 @@ Movie.genre = {
 };
 
 
-module.exports = movie;
+module.exports = Movie;
